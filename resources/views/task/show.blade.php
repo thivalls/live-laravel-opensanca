@@ -1,22 +1,22 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Tarefa {{ $task->id }}
+            Tarefa 1
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <table class="table-auto">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-8">
+                <table class="w-full">
                     <tbody>
                         <tr>
                             <td class="border px-4 py-2"><strong>Nome</strong></td>
-                            <td class="border px-4 py-2">{{ $task->name }}</td>
+                            <td class="border px-4 py-2">Assistir OpenSanca</td>
                         </tr>
                         <tr>
                             <td class="border px-4 py-2"><strong>Status</strong></td>
-                            <td class="border px-4 py-2">{{ $task->status ? 'Concluído' : 'Aberta' }}</td>
+                            <td class="border px-4 py-2">Aberta</td>
                         </tr>
                     </tbody>
                 </table>

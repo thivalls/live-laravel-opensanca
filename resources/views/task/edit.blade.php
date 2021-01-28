@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Editando Task') }}
+            {{ __('Editando Tarefa') }} - 1
         </h2>
     </x-slot>
 
@@ -11,7 +11,7 @@
 
                 <form action="" class="w-full" method="post">
                     @csrf
-                    @method="update"
+                    @method('put')
 
                     <div class="flex w-full">
                         <div class="w-1/2">
@@ -24,7 +24,7 @@
                                     id="name"
                                     name="name"
                                     placeholder="Nome da tarefa"
-                                    value="{{ $task->name ?? '' }}"
+                                    value="Assistir OpenSanca"
                                 >
                             </div>
                         </div>
@@ -33,7 +33,13 @@
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="status">
                                     Status
                                 </label>
-                                <input type="checkbox" {{ $task->status ? 'checked' : '' }} class="input-checkbox" id="status" name="status">
+                                <input
+                                    type="checkbox"
+                                    class="input-checkbox"
+                                    id="status"
+                                    name="status"
+                                    checked
+                                >
                                 <span>Aberto</span>
                             </div>
                         </div>
